@@ -13,6 +13,7 @@ const getUser = async(req, res) => {
 const createUser = async(req,res) => {
     try{
         const {firstname, lastname, email} = req.body
+        console.log(JSON.stringify(req.body))
         const id = Object.keys(users).length + 1
         users[id] = {'id':id,'firstname':firstname, 'lastname':lastname, 'email':email}
 
@@ -27,4 +28,7 @@ const getUserId = async(req,res) => {
     res.send(users[id])
 }
 
-module.exports =  {getUser, getUserId, createUser}
+const getToDosUser = async(req,res) => {
+
+}
+module.exports =  {getUser, getUserId, createUser, getToDosUser}

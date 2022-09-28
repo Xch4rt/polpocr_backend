@@ -13,7 +13,19 @@ const getTodo = async(req,res) => {
     }
 }
 
-const createTask = async(req,res) => {}
+const createTask = async(req,res) => {
+    try{
+        const id = req.params.id;
+        const lastd_id = tasks[id].length + 1
+        const {title, completed} = req.body
+        console.log(JSON.stringify(req.body))
+        tasks[lastd_id] = {'id':lastd_id,'title':title, 'completed':completed, 'todoid':id, 'userid':id}
+
+        res.send({data: tasks[lastd_id]})
+    }catch(e){
+        console.log(e)
+    }
+}
 
 
 module.exports = {getTodo, createTask}
