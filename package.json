@@ -1,0 +1,26 @@
+{
+  "name": "polpocr_backend",
+  "version": "1.0.0",
+  "description": "Desarrollar un API utilizando el protocolo HTTP y los principios REST para\r una aplicación de listas de tareas pendientes (To do list).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xch4rt/polpocr_backend.git"
+  },
+  "keywords": [],
+  "author": "Xch4rt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xch4rt/polpocr_backend/issues"
+  },
+  "homepage": "https://github.com/Xch4rt/polpocr_backend#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.2"
+  }
+}
