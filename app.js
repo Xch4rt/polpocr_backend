@@ -1,23 +1,13 @@
 const express = require("express");
+const user = require("./routes/user")
 
+const app = express();
 
-var app = express();
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server running on port ${process.env.PORT}`)
 })
 
-app.get("GET/users", (req,res) =>
-{
-    res.json(["Pablo","Gutierrez"])
-})
+app.use('/api/v1', user)
 
-app.get("GET/usres/:id", (req,res) =>{})
 
-app.post("POST/users", (req,res) => {})
-
-app.get("GET/users/:id/todos", (req, res) => {})
-
-app.get("GET/todos/:id", (req,res) => {})
-
-app.post("POST/todos/:id/task", (req,res) => {})
